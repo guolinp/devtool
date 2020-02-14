@@ -1,3 +1,5 @@
 #!/bin/sh
 
-/vscode/code-server --auth none "$@"
+[ $# -gt 0 ] && arguments="$@" || arguments="--auth none"
+
+/vscode/code-server $arguments
